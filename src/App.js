@@ -39,7 +39,7 @@ function App() {
         {people.map((person, personIndex) => {
           const { id, image, title, quote, name } = person;
 
-          //* conditions.
+          //* conditions for the slide.
           let position = "nextSlide";
           if (personIndex === index) {
             position = "activeSlide";
@@ -50,7 +50,7 @@ function App() {
           ) {
             position = "lastSlide";
           }
-          //* end of the conditions
+          //* mapping the json/data
           return (
             <article className={position} key={id}>
               <img src={image} alt={name} className="person-img" />
